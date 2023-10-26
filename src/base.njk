@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es-ES">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Red Ciudadana" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/css/maingrid.css" type="text/css" />
+	<!-- / -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    {% block head %}
+    {% endblock %}
+
+</head>
+
+<body class="stretched search-overlay">
+	
+    <!-- Preloader Start -->
+	<div id="preloader-active">
+		<div class="preloader d-flex align-items-center justify-content-center">
+			<div class="preloader-inner position-relative">
+				<div class="text-center">
+					<img src="/assets/imgs/red/loader.gif" style="width:50%;height:auto;margin:auto" alt="" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="full-header header-size-sm h-0" data-mobile-sticky="true">
+			<div id="header-wrap" style="background:#fff">
+				<div class="container px-6 py-4 p-0-responsive">				
+					<div class="container2 header-row justify-content-lg-between">
+
+						<!-- Logo
+						============================================= -->
+                        <div class="col-lg-3">
+                            <div id="logo">
+                                <a href="/index.html" class="standard-logo"><img style="" src="/assets/imgs/red/LOGO/RA-14.png" alt="Canvas Logo"></a>
+                                <a href="/index.html" class="retina-logo"><img style="" src="/assets/imgs/red/LOGO/RA-14.png" alt="Canvas Logo"></a>
+                            </div><!-- #logo end -->
+                        </div>
+
+						<button class="menu_bars px-2" onclick='menu()'><i class="fa fa-bars" style="font-size:25px"></i></button>
+						<!-- Primary Navigation
+						============================================= -->
+                        <div class="col-lg-9">
+                            <nav class="primary-menu">
+
+
+                                <ul id="menu-container" class="menu-container" style="justify-content:end">
+                                    <li class="menu-item "><a class="menu-link transition1" href="#">Bibliografía</a></li>
+                                    <li class="menu-item "><a class="menu-link transition1" href="#">En el Congreso</a></li>
+                                    <li class="menu-item "><a class="menu-link transition1" href="#">Temas</a></li>
+                                    <li class="menu-item "><a class="menu-link transition1" href="#">Noticias</a></li>
+                                    <div class="dropdown">
+										<button class="dropdown-toggle" style="    font-size: 13px;font-weight: 600;letter-spacing: 1.5px;padding: 0.5rem 1rem;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+											Fiscalización
+										</button>
+										<ul class="dropdown-menu">
+											<li><a class="dropdown-item" href="#">Representación</a></li>
+                                            <li><a class="dropdown-item" href="#">Legislación</a></li>
+										</ul>
+									</div>
+                                    <li class="menu-item "><a class="menu-link transition1" href="#">Documentación</a></li>
+                                    <li class="menu-item "><a class="menu-link transition1" href="#">Pasantías</a></li>
+                                    <li class="menu-item "><a class="menu-link transition1" href="#">Contacto</a></li>
+                                    <!--li class="menu-item"><a class="menu-link transition1" href="/preguntas/index.html">Preguntas Frecuentes</a></li-->
+                                </ul>
+
+                                
+                                {# <div class="d-flex redes f-right">
+									<a target="_blank" class="transition1" href="https://www.instagram.com/redxguate/"><i class="fab fa-instagram "></i></a>
+                                    <a target="_blank" class="transition1" href="https://www.tiktok.com/@redxguate"><i class="fa-brands fa-tiktok"></i></a>
+                                    <a target="_blank" class="transition1" href="https://twitter.com/redxguate"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a target="_blank" class="transition1" href="https://www.facebook.com/Redciudadanagt"><i class="fab fa-facebook-f"></i></a>
+                                    <a target="_blank" class="transition1" href="https://www.youtube.com/channel/UCQwc62j7beStZYFzwPxBEQg"><i class="fab fa-youtube"></i></a>
+                                </div> #}
+
+                            </nav><!-- #primary-menu end -->
+                        </div>
+						
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		
+		{% block content %}
+
+        {% endblock %} 
+
+		<!-- Footer
+		============================================= -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+
+    <!-- JavaScripts
+	============================================= -->
+	<script src="/assets/js/jquery.js"></script>
+	<script src="/assets/js/plugins.min.js"></script>
+	<!--script src="/js/popup2.js"></script-->
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="/assets/js/functions.js"></script> 
+
+
+    {% block body_javascripts %}
+
+    {% endblock %}
+
+    <script>
+		(function ($) {
+			("use strict");
+			// Page loading
+			$(window).on("load", function () {
+				$("#preloader-active").delay(450).fadeOut("slow");
+				$("body").delay(450).css({
+					overflow: "visible"
+				});
+				$("#onloadModal").modal("show");
+			});
+		
+		})(jQuery);
+	</script>
+
+    <script type="text/javascript">
+		function menu() {
+			menu_div = document.getElementById("menu-container");
+			if( menu_div.style.display == "none"){
+				menu_div.style.display = "block";
+			}
+			else if(menu_div.style.display == "block"){
+				menu_div.style.display = "none";
+			}
+			else{
+				menu_div.style.display = "block";
+			}
+		}
+	</script>
+
+	<script>
+      if (window.netlifyIdentity) {
+          window.netlifyIdentity.on('init', (user) => {
+          if (!user) {
+              window.netlifyIdentity.on('login', () => {
+              document.location.href = '/admin/';
+              });
+          }
+          });
+      }
+    </script>
+    
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	</body>
+</html>
