@@ -81,7 +81,7 @@ permalink: "index.html"
                         {% for novedad in collections.novedades | reverse | limit(1) %}
                         <div class="row">
                             <div class="col-lg-6">
-                                <img src="{{ novedad.data.image }}" alt="novedad" class="h-100">
+                                <img src="{{ novedad.data.image }}" alt="novedad" class="h-100 w-100">
                             </div>
                             <div class="col-lg-6" style="background-color:#fff">
                                 <div class="p-4 my-auto" style="text-align:left">
@@ -108,7 +108,7 @@ permalink: "index.html"
                         
                             <div class="col-lg-6" >
                                 <div style="background-color:#fff;height:100%">
-                                    <img src="{{ novedad.data.image }}" alt="novedad">
+                                    <img src="{{ novedad.data.image }}" alt="novedad" class="w-100">
                                     <div class="p-4 my-auto" style="text-align:left">
                                         <h5 class="font-bold text-lg">
                                         {{novedad.data.title }}
@@ -146,7 +146,7 @@ permalink: "index.html"
                         
                             <div class="col-lg-6" >
                                 <div style="background-color:#fff;height:100%">
-                                    <img src="{{ novedad.data.image }}" alt="novedad">
+                                    <img src="{{ novedad.data.image }}" alt="novedad" class="w-100">
                                     <div class="p-4 my-auto" style="text-align:left">
                                         <h5 class="font-bold text-lg">
                                         {{novedad.data.title }}
