@@ -20409,3 +20409,21 @@ select{
 .cuadro_etapas_active h3{
   color: #fff!important;
 }
+
+.upp_header{
+  height:70px;
+  background-color:rgb(101, 44, 144)
+}
+
+.justify-content-end_normal{
+  justify-content: end;
+}
+
+@media only screen and (max-width: 960px) {
+  .upp_header {
+      height: 140px;
+  }
+  .justify-content-end_normal{
+    justify-content: flex-start;
+  }
+}
