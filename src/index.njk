@@ -144,13 +144,20 @@ permalink: "index.html"
                         <div class="row my-4" >
                             <div class="col-lg-6">
                                 <h1 class="text-white text-center mb-4" style="font-size:30px">Videos</h1>
-                                <img src="/assets/imgs/posts/diputado-06.png">
-                                <img src="/assets/imgs/posts/diputado-06.png">
+                                {% for video in collections.videos | reverse | limit(2) %}
+                                <div class="my-2">
+                                    {{video.data.embed | safe}}
+                                </div>
+                                {% endfor %}
                             </div>
 
                             <div class="col-lg-6">
                                 <h1 class="text-white text-center mb-4" style="font-size:30px">Tik Toks</h1>
-                                <img src="/assets/imgs/posts/diputado-06.png">
+                                {% for tiktok in collections.tiktoks | reverse | limit(1) %}
+                                <div class="my-2">
+                                    {{tiktok.data.embed | safe}}
+                                </div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
